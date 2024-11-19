@@ -1,0 +1,33 @@
+---
+import { Button } from "./ui/button";
+import { Search } from "lucide-react";
+
+---
+
+<header class="flex justify-between gap-1 w-full px-12 py-4">
+    <img src="/logo.png" alt="ese norte tress">
+    <nav class="grid place-items-center">
+        <ul class="flex gap-4 list-none justify-center items-center">
+            <li>
+                <a href="#">{'Sobre Nosotros'}</a>
+            </li>
+            <li>
+                <a href="#">{'Planes y Convenios'}</a>
+            </li>
+            <li>
+                <a href="#">{'Servicio al Cliente'}</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex gap-4 justify-center items-center">
+        <Button variant={'outline'}>
+            {'Buscador'}
+            <Search class:list={'w-4 h-4'} />
+
+        </Button>
+        <Button >
+            {'Reserva a tu especilista'}
+        </Button>
+    </div>
+
+</header>
