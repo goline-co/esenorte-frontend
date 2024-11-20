@@ -1,12 +1,13 @@
 ---
 import { Button } from "./ui/button";
-import { Search } from "lucide-react";
 
+import { Search } from "lucide-react";
+import Navigation from './Navigation'
 ---
 
-<header class="flex justify-between gap-1 w-full px-12 py-4">
+<header class="flex justify-between gap-1 w-full px-4 md:px-12 py-4 bg-blue-50">
     <img src="/logo.png" alt="ese norte tress">
-    <nav class="grid place-items-center">
+    <nav class="hidden md:grid place-items-center">
         <ul class="flex gap-4 list-none justify-center items-center">
             <li>
                 <a href="#">{'Sobre Nosotros'}</a>
@@ -20,14 +21,15 @@ import { Search } from "lucide-react";
         </ul>
     </nav>
     <div class="flex gap-4 justify-center items-center">
-        <Button variant={'outline'}>
-            {'Buscador'}
+        <Button variant={'outline'} className="bg-blue-50 border-2 px-3 aspect-square md:aspect-auto">
+            <span class="hidden md:inline ">{'Buscador'}</span>
             <Search class:list={'w-4 h-4'} />
-
         </Button>
-        <Button >
+        <Button  className={'hidden md:flex'}>
             {'Reserva a tu especilista'}
         </Button>
+        <div class='md:hidden'>
+            <Navigation client:load />
+        </div>
     </div>
-
 </header>

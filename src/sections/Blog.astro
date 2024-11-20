@@ -1,0 +1,72 @@
+---
+import { Button } from "@/components/ui/button";
+---
+
+<section id="blog" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Título -->
+      <h2 class="text-start text-4xl text-zinc-700 mb-8">
+        Cuida tu salud con Ese Norte 3
+      </h2>
+  
+      <div class="flex justify-right  gap-4 mb-12 text-sm overflow-x-auto w-[calc(100vw_-_32px)] pb-4 pr-4">
+        <Button className="px-6 py-2 rounded-full text-white bg-primary hover:bg-primary/80 transition">
+          Todos
+        </Button>
+        <Button className="px-6 py-2 rounded-full text-gray-700 bg-gray-200 hover:bg-gray-300 transition">
+          Tratamientos
+        </Button>
+        <Button className="px-6 py-2 rounded-full text-gray-700 bg-gray-200 hover:bg-gray-300 transition">
+          Salud Mujer
+        </Button>
+        <Button className="px-6 py-2 rounded-full text-gray-700 bg-gray-200 hover:bg-gray-300 transition">
+          Salud Hombre
+        </Button>
+        <Button className="px-6 py-2 rounded-full text-gray-700 bg-gray-200 hover:bg-gray-300 transition">
+          Salud Mental
+        </Button>
+      </div>
+  
+      <!-- Lista de artículos -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tarjeta de artículo -->
+        {Array.from({ length: 6 }).map((_) => (
+          <article
+            class="bg-white rounded-sm transition overflow-hidden"
+          >
+            <div class="relative">
+                <img
+                src="/article-cardio.png"
+                alt="Artículo"
+                class="w-full object-cover aspect-square"
+              />
+              <div class="bg-gray-100 text-zinc-700 text-xs rounded-full md:px-6 px-4 md:py-1 mb-4 absolute top-2 right-2 md:top-4 md:right-4 h-8 lg:h-[40px] flex items-center">
+                Tratamientos
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-normal text-start mt-4 mb-4">
+                ¿Qué es la hipertensión arterial?
+              </h3>
+              <p class="text-zinc-500 text-sm">
+                En IntegraMédica cuidamos la salud de tu corazón. Por eso,
+                contamos con un gran equipo de médicos cardiólogos...
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 text-sm font-medium mt-4 inline-flex items-center"
+              >
+                Ver más →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+  
+      <div class="text-center mt-12">
+        <Button >
+            {'Ver más información'}
+        </Button>
+      </div>
+    </div>
+  </section>
